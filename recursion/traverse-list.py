@@ -1,7 +1,7 @@
 def count_leaf_items(linked_list: list) -> int:
     length = 0
     for item in linked_list:
-        if type(item) is not list:
+        if not isinstance(item, list):
             length += 1
         else:
             length += count_leaf_items(item)
